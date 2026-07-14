@@ -1,0 +1,514 @@
+/* ============================================================
+   project.css
+   Style sheet for the fly/lure marketplace site
+   Used by: index.html, browse.html, how_it_works.html,
+            sign_up.html, login.html
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   FONTS
+   Playfair Display - used for headings (h1, h2, h3)
+   Oswald - used for navigation links and buttons
+   Arial - used for regular body text (paragraphs, lists)
+   The two Google Fonts are imported below so every page that
+   links this style sheet has access to them.
+   ------------------------------------------------------------ */
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Oswald:wght@400;500;600&display=swap");
+
+/* ------------------------------------------------------------
+   BODY
+   This sets the default look for the whole page. Anything not
+   specifically styled below (like a plain paragraph) will use
+   these settings.
+   ------------------------------------------------------------ */
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f7f3e9; /* off white */
+  color: #2b2d2a; /* charcoal */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ------------------------------------------------------------
+   HEADINGS
+   h1, h2, h3 show up on every page (page titles, section
+   titles, card titles on browse.html, step titles on
+   how_it_works.html). Using Playfair Display gives them a
+   more "established" look than the body text.
+   ------------------------------------------------------------ */
+
+h1 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: #2d5a3d; /* forest green */
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: #2d5a3d; /* forest green */
+  font-size: 28px;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+h3 {
+  font-family: "Playfair Display", Georgia, serif;
+  color: #2d5a3d; /* forest green */
+  font-size: 20px;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* ------------------------------------------------------------
+   PARAGRAPHS
+   Regular body text. Used everywhere - product descriptions,
+   the how-it-works explanation, etc.
+   ------------------------------------------------------------ */
+
+p {
+  margin: 0 0 16px 0;
+}
+
+/* ------------------------------------------------------------
+   LISTS
+   Unordered list - used for things like feature lists or
+   benefits.
+   Ordered list - used specifically for the numbered steps on
+   how_it_works.html ("Step 1, Step 2, Step 3...").
+   ------------------------------------------------------------ */
+
+ul {
+  margin: 0 0 16px 0;
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+ol {
+  margin: 0 0 16px 0;
+  padding-left: 20px;
+}
+
+ol li {
+  margin-bottom: 10px;
+}
+
+/* ------------------------------------------------------------
+   LINKS (inside paragraphs/body text, not the nav bar)
+   ------------------------------------------------------------ */
+
+a {
+  color: #c1502e; /* burnt orange */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------------------------------------
+   LOGO BAR
+   The very top row of every page: a boxed LOGO placeholder on
+   the left and the site name centered next to it. This matches
+   the top box shown in the wireframe, separate from the nav
+   row below it.
+   ------------------------------------------------------------ */
+
+#logo-bar {
+  background-color: #2d5a3d; /* forest green */
+  border: 1px solid #1f4029;
+  padding: 15px 20px;
+}
+
+#logo {
+  display: inline-block;
+  border: 1px solid #f7f3e9; /* off white */
+  color: #f7f3e9;
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 14px;
+  padding: 15px 25px;
+}
+
+#site-name {
+  display: inline-block;
+  color: #f7f3e9; /* off white */
+  font-size: 24px;
+  margin: 0;
+  margin-left: 10px;
+  text-align: center;
+}
+
+/* ------------------------------------------------------------
+   NAVIGATION
+   The nav row sits directly below the logo bar and lists the
+   main pages: Home, Browse, How it works, Sign up, Log in.
+   Each link is boxed to match the wireframe's button-style nav.
+   ------------------------------------------------------------ */
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* navigation buttons */
+nav ul li {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  text-align: center;
+}
+
+nav a {
+  display: block;
+  font-family: "Oswald", Arial, sans-serif;
+  background-color: #ceab39; /* forest green */
+  color: #000000; /* off white */
+  text-decoration: none;
+  font-size: 16px;
+  padding: 18px 0;
+}
+
+nav a:hover {
+  background-color: #4f504d; /* slightly darker forest green */
+  color: #d4a017; /* mustard */
+}
+
+/* ------------------------------------------------------------
+   BREADCRUMBS
+   The small "Home > Browse > Listing title" trail that appears
+   under the nav on inner pages like browse.html.
+   ------------------------------------------------------------ */
+
+.breadcrumb {
+  font-size: 14px;
+  color: #5c4033; /* brown */
+  padding: 12px 30px 0 30px;
+}
+
+.breadcrumb a {
+  color: #5c4033; /* brown */
+}
+
+/* ------------------------------------------------------------
+   MAIN CONTENT AREA
+   Wraps the main content on each page so the text and cards
+   don't run all the way to the edges of the browser window.
+   ------------------------------------------------------------ */
+
+main {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+
+/* Home page layout: three columns side by side */
+#home-columns {
+  display: flex;
+  gap: 0px;
+}
+
+/* ------------------------------------------------------------
+   HOME PAGE COLUMNS
+   The home page (index.html) is laid out in 3 columns side by
+   side, matching the wireframe: a text/list column on the
+   left, a hero image column in the center, and a shorter
+   text/image column on the right. Floats are used to place
+   them next to each other, and the clearfix rule after this
+   makes sure later content (like the footer) drops below them
+   instead of wrapping around them.
+   ------------------------------------------------------------ */
+
+.column {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+#col-left {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 30%;
+}
+
+#col-center {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 40%;
+}
+
+#col-right {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: 30%;
+}
+
+#hero-image {
+  width: 100%;
+  border: 1px solid #cccccc;
+  margin-bottom: 15px;
+}
+
+#side-image {
+  width: 100%;
+  border: 1px solid #cccccc;
+  margin-top: 10px;
+}
+
+.inline-img {
+  float: left;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #cccccc;
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+/* ------------------------------------------------------------
+   BUTTONS
+   Primary button (burnt orange) - main actions like "Sign Up"
+   or "Buy Now".
+   Secondary button (sky blue) - lower-priority actions like
+   "Learn More".
+   ------------------------------------------------------------ */
+
+.btn-primary {
+  display: inline-block;
+  font-family: "Oswald", Arial, sans-serif;
+  background-color: #c1502e; /* burnt orange */
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-primary:hover {
+  background-color: #a8431f; /* darker burnt orange for hover */
+}
+
+.btn-secondary {
+  display: inline-block;
+  font-family: "Oswald", Arial, sans-serif;
+  background-color: #5b8c9e; /* sky blue */
+  color: #ffffff;
+  font-size: 16px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.btn-secondary:hover {
+  background-color: #4a7686; /* darker sky blue for hover */
+}
+
+/* ------------------------------------------------------------
+   FORMS
+   Used on sign_up.html and login.html.
+   ------------------------------------------------------------ */
+
+form {
+  background-color: #e8dcc4; /* warm sand */
+  padding: 30px;
+  border-radius: 6px;
+  max-width: 400px;
+}
+
+form label {
+  display: block;
+  font-family: "Oswald", Arial, sans-serif;
+  color: #2b2d2a; /* charcoal */
+  margin-bottom: 5px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+/* Centers the heading, intro text, and form on the
+   login and sign-up pages */
+.auth-wrapper {
+  text-align: center;
+}
+
+.auth-wrapper form {
+  margin: 0 auto;
+  text-align: left; /* keep labels/inputs left-aligned inside the form */
+}
+
+/* ------------------------------------------------------------
+   FOOTER
+   The bottom section of every page. Brown background ties back
+   to the wood/leather feel of the fishing theme.
+   ------------------------------------------------------------ */
+
+footer {
+  background-color: #5c4033; /* brown */
+  color: #f7f3e9; /* off white */
+  text-align: center;
+  padding: 20px;
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 14px;
+}
+
+footer a {
+  color: #f7f3e9; /* off white */
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #d4a017; /* mustard */
+}
+
+/* ============================================================
+   MEDIA SCREENS
+   ============================================================ */
+
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  main {
+    padding: 20px;
+  }
+  #home-columns {
+    gap: 15px;
+  }
+  .column {
+    padding: 0 8px;
+  }
+  nav a {
+    font-size: 14px;
+    padding: 14px 0;
+  }
+  #site-name {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 26px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 18px;
+  }
+  #home-columns {
+    flex-direction: column;
+  }
+  #col-left,
+  #col-center,
+  #col-right {
+    flex-basis: auto;
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  nav ul {
+    flex-direction: column;
+  }
+  nav ul li {
+    flex-basis: auto;
+  }
+  #logo-bar {
+    padding: 12px;
+    text-align: center;
+  }
+  #site-name {
+    margin-left: 0;
+  }
+  form {
+    max-width: 100%;
+  }
+  .breadcrumb {
+    padding: 12px 15px 0 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  main {
+    max-width: 99%;
+  }
+  h1 {
+    font-size: 44px;
+  }
+  #home-columns {
+    gap: 40px;
+  }
+}
+
+/* ============================================================
+   BROWSE PAGE CARDS
+   ============================================================ */
+
+.listings-grid {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  /* gap is space between cards here, both across and down */
+}
+
+.card {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 300px;
+  max-width: 100%;
+
+  /* card styling */
+  background-color: #ffffff;
+  border: 1px solid #e0d9c8;
+  border-radius: 6px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.card-image {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-bottom: 1px solid #e0d9c8;
+}
+
+.card-body {
+  padding: 15px 20px 20px 20px;
+}
+
+.card-maker {
+  font-size: 14px;
+  color: #5c4033; /* brown */
+  margin-bottom: 8px;
+}
+
+.card-price {
+  font-family: "Oswald", Arial, sans-serif;
+  font-size: 18px;
+  color: #2d5a3d; /* forest green */
+  margin-bottom: 16px;
+}
+
+/* classes for browse page */
+.centerbrowse {
+  text-align: center;
+}
