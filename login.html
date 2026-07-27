@@ -3,15 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Anglers Market - Log In</title>
+    <meta name="author" content="Christian" />
+    <meta
+      name="description"
+      content="Browse hand-tied flies and custom lures from local fly tiers and lure makers across the Mountain West."
+    />
+    <meta
+      name="keywords"
+      content="browse flies, woolly bugger, streamer flies, buy fishing lures, hand tied flies, trout flies"
+    />
+    <title>Anglers Market - Browse</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <!-- Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX");
+    </script>
   </head>
   <body>
     <!-- LOGO BAR -->
-    <div id="logo-bar">
+    <header id="logo-bar">
       <a href="index.html"><h1 id="site-name">Anglers Market</h1></a>
-    </div>
+    </header>
+
     <!-- NAVIGATION -->
     <nav>
       <ul>
@@ -19,7 +44,11 @@
         <li><a href="browse.html">Browse</a></li>
         <li><a href="how_it_works.html">How it works</a></li>
         <li><a href="sign_up.html">Sign up</a></li>
-        <li><a href="login.html">Log in</a></li>
+        <li>
+          <a href="login.html" class="current-page" aria-current="page"
+            >Log in</a
+          >
+        </li>
       </ul>
     </nav>
 
@@ -47,6 +76,16 @@
 
     <!-- FOOTER -->
     <footer>
+      <p>
+        <a href="mailto:support@anglersmarket.com">support@anglersmarket.com</a>
+        &nbsp;|&nbsp;
+        <a href="tel:+14355550142">(435) 555-0142</a>
+      </p>
+      <p>
+        <a href="https://www.instagram.com/">Instagram</a> &nbsp;|&nbsp;
+        <a href="https://www.facebook.com/">Facebook</a> &nbsp;|&nbsp;
+        <a href="https://www.youtube.com/">YouTube</a>
+      </p>
       <p>&copy; 2026 Anglers Market. All rights reserved.</p>
     </footer>
   </body>

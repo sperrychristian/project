@@ -3,20 +3,50 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Christian Sperry" />
+    <meta
+      name="description"
+      content="Browse hand-tied flies and custom lures from local fly tiers and lure makers across the Mountain West."
+    />
+    <meta
+      name="keywords"
+      content="browse flies, woolly bugger, streamer flies, buy fishing lures, hand tied flies, trout flies"
+    />
     <title>Anglers Market - Browse</title>
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-G459N08LR2"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-G459N08LR2");
+    </script>
   </head>
   <body>
     <!-- LOGO BAR -->
-    <div id="logo-bar">
+    <header id="logo-bar">
       <a href="index.html"><h1 id="site-name">Anglers Market</h1></a>
-    </div>
+    </header>
+
     <!-- NAVIGATION -->
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="browse.html">Browse</a></li>
+        <li>
+          <a href="browse.html" class="current-page" aria-current="page"
+            >Browse</a
+          >
+        </li>
         <li><a href="how_it_works.html">How it works</a></li>
         <li><a href="sign_up.html">Sign up</a></li>
         <li><a href="login.html">Log in</a></li>
@@ -36,7 +66,7 @@
       <!-- LISTINGS GRID -->
       <div class="listings-grid">
         <!-- CARD 1 -->
-        <div class="card">
+        <article class="card">
           <img
             src="images/blackfly.jpg"
             alt="black woolly bugger fly with a bead head"
@@ -48,10 +78,10 @@
             <p class="card-price">$4.50</p>
             <a href="#" class="btn-primary">View listing</a>
           </div>
-        </div>
+        </article>
 
         <!-- CARD 2 -->
-        <div class="card">
+        <article class="card">
           <img
             src="images/greenstreamer.jpg"
             alt="olive streamer fly"
@@ -63,10 +93,10 @@
             <p class="card-price">$5.25</p>
             <a href="#" class="btn-primary">View listing</a>
           </div>
-        </div>
+        </article>
 
         <!-- CARD 3 -->
-        <div class="card">
+        <article class="card">
           <img
             src="images/streamer.jpg"
             alt="black articulated streamer with red eyes"
@@ -78,12 +108,22 @@
             <p class="card-price">$8.75</p>
             <a href="#" class="btn-primary">View listing</a>
           </div>
-        </div>
+        </article>
       </div>
     </main>
 
     <!-- FOOTER -->
     <footer>
+      <p>
+        <a href="mailto:support@anglersmarket.com">support@anglersmarket.com</a>
+        &nbsp;|&nbsp;
+        <a href="tel:+14355550142">(435) 555-0142</a>
+      </p>
+      <p>
+        <a href="https://www.instagram.com/">Instagram</a> &nbsp;|&nbsp;
+        <a href="https://www.facebook.com/">Facebook</a> &nbsp;|&nbsp;
+        <a href="https://www.youtube.com/">YouTube</a>
+      </p>
       <p>&copy; 2026 Anglers Market. All rights reserved.</p>
     </footer>
   </body>
